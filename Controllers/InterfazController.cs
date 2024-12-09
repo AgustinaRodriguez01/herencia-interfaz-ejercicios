@@ -23,5 +23,14 @@ namespace herencia_interfaz_ejercicios.Controllers
             Perro perro = new Perro();
             return _base.GetComer(perro);
         }
+
+        [HttpGet]
+        [Route("api/EjemploInterfazConImplementacion")]
+        public string EjemploInterfazConImplementacion()
+        {
+            IAnimal perro = new Perro();
+            return perro.HacerSonido();
+
+        }
     }
 }
